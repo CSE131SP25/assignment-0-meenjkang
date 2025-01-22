@@ -29,29 +29,28 @@ public class RobotInstructions  {
 		 * You will add instructions at the end of the code to cause the support.robot to move
 		 * as you desire.
 		 */
-        robot.turnLeft(45); // Begin the left side
+        robot.turnLeft(45);
 
-        // Draw the left slant to the top
-        robot.forward(30); // Move toward the tip of the left curve
+        //left slant to the top
+        robot.forward(30);
 
-        // Draw the left curve (half-circle approximation)
-        for (int i = 0; i < 18; i++) { // More steps for a smoother curve
-            robot.forward(5); // Move forward a small step
-            robot.turnLeft(30); // Turn slightly to form the curve
+        //left curve
+        for (int i = 0; i < 18; i++) { 
+            robot.forward(5);
+            robot.turnLeft(30);
         }
 
-        // Draw the right curve (half-circle approximation)
-        robot.turnRight(180); // Reorient to start the second curve
+        //right curve
+        robot.turnRight(180);
         for (int i = 0; i < 18; i++) {
             robot.forward(5);
             robot.turnLeft(10);
         }
 
-        // Draw the right slant back to the point
-        robot.turnRight(45); // Align for the straight edge
-        robot.forward(80); // Return to the base
+        //right slant
+        robot.turnRight(45); 
+        robot.forward(80);
 
-        // Reorient to the original direction
         robot.turnRight(135);
     }
 }
